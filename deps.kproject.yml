@@ -1,0 +1,6 @@
+dependencies:
+  - https://github.com/korlibs/korge-fleks/tree/main/fleks
+  - https://github.com/korlibs/korge-ext/tree/0.0.1/korge-collision
+  - https://github.com/Bruce0203/korge-tiled/tree/6ec844e5402b2b7aaa24f530f0c840387e66700a/korge-tiled
+  - https://github.com/Bruce0203/korge-box2d/tree/15b83cf6cb4ab3726c17e36ec3865e0829ed01f1/korge-box2d
+  - https://github.com/korlibs/korge-virtualcontroller/tree/0.0.4/korge-virtualcontroller##2e465059da35e9fb813ae87f40e6a11f68152cf7
