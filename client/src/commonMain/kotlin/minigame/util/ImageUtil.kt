@@ -15,7 +15,7 @@ fun ImageAnimation.flipX() = let {
                 frame.name,
                 frame.index
             )
-        }.toList().apply { println(this) },
+        },
         it.direction,
         it.name,
         it.layers

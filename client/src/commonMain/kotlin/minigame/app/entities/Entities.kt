@@ -30,7 +30,6 @@ suspend fun Stage.createBot() = fleksWorld.entity {
     it += createRigidBody(speed = Vector2(60f, 5.9f)) {
         val stage = this@createBot
         this[Sprite].body.body!!
-        println(stage.box2dWorld.bodyList!!.getAllContacts().size)
         Vector2(0, -1)
     }
 }

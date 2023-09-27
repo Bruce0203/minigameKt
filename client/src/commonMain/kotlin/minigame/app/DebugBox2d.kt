@@ -22,7 +22,6 @@ fun Stage.debugView() {
     val stage = this
     val debugBox2d = DebugBox2d(stage)
         screen.keys.down(Key.SHIFT) {
-            println("B")
             debugBox2d.debugEnabled = !debugBox2d.debugEnabled
         }
 }
