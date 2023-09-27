@@ -4,6 +4,7 @@ import korlibs.korge.gradle.targets.desktop.configureNativeDesktop
 import korlibs.korge.gradle.targets.desktop.configureNativeDesktopCross
 import korlibs.korge.gradle.targets.desktop.configureNativeDesktopRun
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import java.util.Properties
 
 apply<KorgeGradlePlugin>()
 apply(plugin = "org.jetbrains.kotlin.plugin.serialization")
@@ -61,9 +62,15 @@ fun SourceDirectorySet.addSrcDir(file: File) {
 
 @Suppress("UnstableApiUsage")
 tasks.withType<ProcessResources> {
-    afterEvaluate {
         filesMatching("client.properties") {
-            expand(rootProject.properties)
-        }
+            runCatching {
+                val props =
+                    Properties().apply { load(File(rootDir, "gradle.properties").inputStream()) }
+                println(props)
+                expand(
+                    "version" to props["version"],
+                    "server" to props["server"],
+                )
+            }.exceptionOrNull()?.apply { println(this) }
     }
 }
