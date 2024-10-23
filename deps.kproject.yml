@@ -1,5 +1,5 @@
 dependencies:
-  - https://github.com/korlibs/korge-fleks/tree/main/fleks
+  - https://github.com/korlibs/korge-fleks/tree/e158c3587cbdc45af1083de88c42cc446b8d9619/fleks
   - https://github.com/korlibs/korge-ext/tree/0.0.1/korge-collision
   - https://github.com/Bruce0203/korge-tiled/tree/6ec844e5402b2b7aaa24f530f0c840387e66700a/korge-tiled
   - https://github.com/Bruce0203/korge-box2d/tree/15b83cf6cb4ab3726c17e36ec3865e0829ed01f1/korge-box2d
